@@ -108,6 +108,168 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* How It Works Section */}
+          <div className="text-center py-32">
+            {/* Section Heading */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-20 tracking-wide">
+              How It Works
+            </h2>
+            
+            {/* Steps Container */}
+            <div className="max-w-7xl mx-auto">
+              {/* Desktop: Responsive Grid */}
+              <div className="hidden md:block">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8 relative">
+                  {/* Connecting Lines - Only show on XL screens */}
+                  <div className="hidden xl:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-ardena-cyan/20 via-ardena-cyan/40 to-ardena-cyan/20 transform -translate-y-1/2 z-0"></div>
+                  
+                  {/* Step 1 */}
+                  <div className="relative z-10 group">
+                    <div className="p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/30 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                      <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                        Step 01
+                      </div>
+                      <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                        Start with a Prompt
+                      </h3>
+                      <p className="text-ardena-light-gray text-sm leading-relaxed font-light">
+                        Describe what you want your AI agent to do in simple terms
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="relative z-10 group">
+                    <div className="p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/30 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                      <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                        Step 02
+                      </div>
+                      <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                        Choose Your Model
+                      </h3>
+                      <p className="text-ardena-light-gray text-sm leading-relaxed font-light">
+                        Select from Gemini, DeepSeek, Llama, and other leading AI models
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="relative z-10 group">
+                    <div className="p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/30 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                      <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                        Step 03
+                      </div>
+                      <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                        Review & Test
+                      </h3>
+                      <p className="text-ardena-light-gray text-sm leading-relaxed font-light">
+                        Test your agent in our playground to ensure it works as intended
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className="relative z-10 group">
+                    <div className="p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/30 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                      <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                        Step 04
+                      </div>
+                      <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                        Enhance with Knowledge
+                      </h3>
+                      <p className="text-ardena-light-gray text-sm leading-relaxed font-light">
+                        Upload PDFs, TXT files, or URLs to add your knowledge base
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Step 5 */}
+                  <div className="relative z-10 group">
+                    <div className="p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/30 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                      <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                        Step 05
+                      </div>
+                      <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                        Deploy Anywhere
+                      </h3>
+                      <p className="text-ardena-light-gray text-sm leading-relaxed font-light">
+                        Launch your agent to Discord, Slack, Web, or any platform you choose
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile: Vertical Stack */}
+              <div className="md:hidden space-y-8">
+                {/* Step 1 */}
+                <div className="group relative p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Step 01
+                  </div>
+                  <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                    Start with a Prompt
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Describe what you want your AI agent to do in simple terms
+                  </p>
+                </div>
+
+                {/* Step 2 */}
+                <div className="group relative p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Step 02
+                  </div>
+                  <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                    Choose Your Model
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Select from Gemini, DeepSeek, Llama, and other leading AI models
+                  </p>
+                </div>
+
+                {/* Step 3 */}
+                <div className="group relative p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Step 03
+                  </div>
+                  <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                    Review & Test
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Test your agent in our playground to ensure it works as intended
+                  </p>
+                </div>
+
+                {/* Step 4 */}
+                <div className="group relative p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Step 04
+                  </div>
+                  <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                    Enhance with Knowledge
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Upload PDFs, TXT files, or URLs to add your knowledge base
+                  </p>
+                </div>
+
+                {/* Step 5 */}
+                <div className="group relative p-6 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Step 05
+                  </div>
+                  <h3 className="text-lg font-light text-white mb-3 tracking-wide">
+                    Deploy Anywhere
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Launch your agent to Discord, Slack, Web, or any platform you choose
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
