@@ -1049,6 +1049,27 @@ const LandingPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Floating AI Assistant Button */}
+      <div className="fixed bottom-6 right-6 z-40">
+        <button className="group relative w-14 h-14 bg-ardena-cyan rounded-full shadow-lg hover:shadow-xl hover:shadow-ardena-cyan/40 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark">
+          {/* AI Chat Icon */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+            </svg>
+          </div>
+          
+          {/* Subtle pulse animation */}
+          <div className="absolute inset-0 rounded-full bg-ardena-cyan opacity-20 animate-ping"></div>
+          
+          {/* Tooltip */}
+          <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-ardena-dark border border-ardena-cyan/20 rounded-lg text-white text-sm font-light whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Ask AI Assistant
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-ardena-dark"></div>
+          </div>
+        </button>
+      </div>
+
       {/* Contact Modal */}
       {isContactModalOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
