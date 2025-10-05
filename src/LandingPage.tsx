@@ -4,9 +4,52 @@ import logo from './assets/logo.png';
 const LandingPage: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  const toggleContactModal = () => {
+    setIsContactModalOpen(!isContactModalOpen);
+    if (isContactModalOpen) {
+      setContactForm({ name: '', email: '', message: '' });
+      setSubmitStatus('idle');
+    }
+  };
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission (replace with actual email service)
+    try {
+      // Here you would integrate with your email service (EmailJS, Formspree, etc.)
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+      
+      setSubmitStatus('success');
+      setTimeout(() => {
+        setIsContactModalOpen(false);
+        setContactForm({ name: '', email: '', message: '' });
+        setSubmitStatus('idle');
+      }, 2000);
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleContactInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setContactForm(prev => ({ ...prev, [name]: value }));
   };
 
   const toggleMobileMenu = () => {
@@ -769,7 +812,10 @@ const LandingPage: React.FC = () => {
                 <p className="text-ardena-light-gray text-sm font-light mb-4">
                   Still have questions?
                 </p>
-                <button className="text-ardena-cyan hover:text-white transition-colors duration-300 font-medium">
+                <button 
+                  onClick={toggleContactModal}
+                  className="text-ardena-cyan hover:text-white transition-colors duration-300 font-medium"
+                >
                   Contact Support →
                 </button>
               </div>
@@ -1002,6 +1048,129 @@ const LandingPage: React.FC = () => {
           </footer>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      {isContactModalOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-ardena-dark border border-ardena-cyan/20 rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-xl font-light text-white">Contact Support</h3>
+              <button
+                onClick={toggleContactModal}
+                className="text-ardena-light-gray hover:text-white transition-colors duration-300"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Success/Error Messages */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
+                <p className="text-green-400 text-sm font-light">
+                  ✓ Message sent successfully! We'll get back to you soon.
+                </p>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl">
+                <p className="text-red-400 text-sm font-light">
+                  ✗ Something went wrong. Please try again or email us directly.
+                </p>
+              </div>
+            )}
+
+            {/* Contact Form */}
+            <form onSubmit={handleContactSubmit} className="space-y-6">
+              {/* Name Field */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={contactForm.name}
+                  onChange={handleContactInputChange}
+                  required
+                  className="w-full px-4 py-3 bg-ardena-dark/50 border border-ardena-cyan/20 rounded-xl text-white placeholder-ardena-light-gray focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:border-transparent transition-all duration-300"
+                  placeholder="Your name"
+                />
+              </div>
+
+              {/* Email Field */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={contactForm.email}
+                  onChange={handleContactInputChange}
+                  required
+                  className="w-full px-4 py-3 bg-ardena-dark/50 border border-ardena-cyan/20 rounded-xl text-white placeholder-ardena-light-gray focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:border-transparent transition-all duration-300"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              {/* Message Field */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={contactForm.message}
+                  onChange={handleContactInputChange}
+                  required
+                  rows={4}
+                  className="w-full px-4 py-3 bg-ardena-dark/50 border border-ardena-cyan/20 rounded-xl text-white placeholder-ardena-light-gray focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:border-transparent transition-all duration-300 resize-none"
+                  placeholder="How can we help you?"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full py-3 bg-ardena-cyan text-white font-medium rounded-xl transition-all duration-300 hover:bg-ardena-cyan/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </span>
+                ) : (
+                  'Send Message'
+                )}
+              </button>
+            </form>
+
+            {/* Alternative Contact */}
+            <div className="mt-6 pt-6 border-t border-ardena-cyan/20">
+              <p className="text-ardena-light-gray text-sm font-light text-center">
+                Or email us directly at{' '}
+                <a 
+                  href="mailto:pinakleorgltd@gmail.com" 
+                  className="text-ardena-cyan hover:text-white transition-colors duration-300"
+                >
+                  pinakleorgltd@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
