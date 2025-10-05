@@ -3,20 +3,104 @@ import logo from './assets/logo.png';
 
 const LandingPage: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
   };
 
   return (
         <div className="min-h-screen bg-ardena-dark overflow-x-hidden">
           {/* Navbar */}
           <nav className="fixed top-0 left-0 right-0 z-50 py-2 px-4 md:py-3 md:px-6 bg-ardena-dark/90 backdrop-blur-sm border-b border-ardena-cyan/10">
-            <div className="max-w-lg mx-auto md:mx-0 md:ml-2 flex items-center justify-start">
+            <div className="max-w-7xl mx-auto flex items-center justify-between">
+              {/* Logo */}
               <div className="flex items-center">
                 <img src={logo} alt="Ardena Logo" className="h-6 md:h-8 w-auto object-contain" />
               </div>
+
+              {/* Desktop Navigation */}
+              <div className="hidden md:flex items-center space-x-8">
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-ardena-light-gray hover:text-white transition-colors duration-300 font-light"
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => scrollToSection('pricing')}
+                  className="text-ardena-light-gray hover:text-white transition-colors duration-300 font-light"
+                >
+                  Pricing
+                </button>
+                <button className="text-ardena-light-gray hover:text-white transition-colors duration-300 font-light">
+                  Sign In
+                </button>
+                <button className="px-4 py-2 bg-ardena-cyan text-white rounded-lg hover:bg-ardena-cyan/80 transition-colors duration-300 font-medium">
+                  Get Started
+                </button>
+              </div>
+
+              {/* Mobile Hamburger Menu */}
+              <div className="md:hidden">
+                <button
+                  onClick={toggleMobileMenu}
+                  className="p-2 text-ardena-light-gray hover:text-white transition-colors duration-300"
+                  aria-label="Toggle mobile menu"
+                >
+                  <svg 
+                    className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`} 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    {isMobileMenuOpen ? (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    ) : (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    )}
+                  </svg>
+                </button>
+              </div>
             </div>
+
+            {/* Mobile Menu Dropdown */}
+            {isMobileMenuOpen && (
+              <div className="md:hidden absolute top-full left-0 right-0 bg-ardena-dark/95 backdrop-blur-sm border-b border-ardena-cyan/10">
+                <div className="px-4 py-6 space-y-4">
+                  <button 
+                    onClick={() => scrollToSection('about')}
+                    className="block w-full text-left text-ardena-light-gray hover:text-white transition-colors duration-300 font-light py-2"
+                  >
+                    About
+                  </button>
+                  <button 
+                    onClick={() => scrollToSection('pricing')}
+                    className="block w-full text-left text-ardena-light-gray hover:text-white transition-colors duration-300 font-light py-2"
+                  >
+                    Pricing
+                  </button>
+                  <button className="block w-full text-left text-ardena-light-gray hover:text-white transition-colors duration-300 font-light py-2">
+                    Sign In
+                  </button>
+                  <button className="w-full px-4 py-2 bg-ardena-cyan text-white rounded-lg hover:bg-ardena-cyan/80 transition-colors duration-300 font-medium text-center">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+            )}
           </nav>
 
           {/* Main Content */}
@@ -282,8 +366,8 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Pricing Section */}
-          <div className="text-center py-16 md:py-32">
+              {/* Pricing Section */}
+              <div id="pricing" className="text-center py-16 md:py-32">
             {/* Section Heading */}
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white mb-12 md:mb-20 tracking-wide px-4">
               Simple, Transparent Pricing
