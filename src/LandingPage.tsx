@@ -48,7 +48,7 @@ const LandingPage: React.FC = () => {
                 <button className="text-ardena-light-gray hover:text-white transition-colors duration-300 font-light">
                   Sign In
                 </button>
-                <button className="px-4 py-2 bg-ardena-cyan text-white rounded-lg hover:bg-ardena-cyan/80 transition-colors duration-300 font-medium">
+                <button className="px-3 py-1 bg-ardena-cyan text-white rounded-lg hover:bg-ardena-cyan/80 transition-all duration-300 font-medium hover:shadow-lg hover:shadow-ardena-cyan/25 hover:scale-105">
                   Get Started
                 </button>
               </div>
