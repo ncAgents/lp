@@ -5,10 +5,10 @@ const LandingPage: React.FC = () => {
   return (
         <div className="min-h-screen bg-ardena-dark overflow-x-hidden">
           {/* Navbar */}
-          <nav className="absolute top-0 left-0 right-0 z-10 p-4 md:p-6">
-            <div className="max-w-7xl mx-auto flex items-center">
+          <nav className="fixed top-0 left-0 right-0 z-50 py-2 px-4 md:py-3 md:px-6 bg-ardena-dark/90 backdrop-blur-sm border-b border-ardena-cyan/10">
+            <div className="max-w-lg mx-auto md:mx-0 md:ml-2 flex items-center justify-start">
               <div className="flex items-center">
-                <img src={logo} alt="Ardena Logo" className="h-8 md:h-10 w-auto object-contain" />
+                <img src={logo} alt="Ardena Logo" className="h-6 md:h-8 w-auto object-contain" />
               </div>
             </div>
           </nav>
@@ -17,7 +17,7 @@ const LandingPage: React.FC = () => {
           <div className="px-4 md:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div className="min-h-screen flex items-center justify-center text-center">
+          <div className="min-h-screen flex items-center justify-center text-center pt-16">
             <div className="space-y-8 max-w-4xl mx-auto">
               {/* Main Title */}
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight tracking-wide px-4">
