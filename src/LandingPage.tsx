@@ -108,8 +108,21 @@ const LandingPage: React.FC = () => {
           <div className="px-4 md:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <div className="min-h-screen flex items-center justify-center text-center pt-16">
-            <div className="space-y-8 max-w-4xl mx-auto">
+          <div className="min-h-screen flex items-center justify-center text-center pt-16 relative overflow-hidden">
+            {/* Subtle Background Animation */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Floating orbs */}
+              <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-ardena-cyan/20 rounded-full animate-pulse"></div>
+              <div className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-ardena-gold/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+              <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-ardena-cyan/25 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+              <div className="absolute top-2/3 right-1/4 w-1.5 h-1.5 bg-ardena-gold/20 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+              
+              {/* Subtle gradient orbs */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-ardena-cyan/5 via-transparent to-transparent rounded-full blur-3xl"></div>
+              <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-radial from-ardena-gold/3 via-transparent to-transparent rounded-full blur-2xl"></div>
+            </div>
+            
+            <div className="space-y-8 max-w-4xl mx-auto relative z-10">
               {/* Main Title */}
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight tracking-wide px-4">
                 Welcome to the Future of AI
