@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './assets/logo.png';
 
 const LandingPage: React.FC = () => {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
   return (
         <div className="min-h-screen bg-ardena-dark overflow-x-hidden">
           {/* Navbar */}
@@ -481,6 +487,178 @@ const LandingPage: React.FC = () => {
                   <div className="text-ardena-light-gray text-sm font-light">✓ Free forever plan</div>
                   <div className="text-ardena-light-gray text-sm font-light">✓ Setup in minutes</div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="py-16 md:py-24">
+            <div className="max-w-4xl mx-auto px-4">
+              {/* FAQ Heading */}
+              <div className="text-center mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white mb-4 tracking-wide">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-ardena-light-gray text-base md:text-lg font-light">
+                  Everything you need to know about Ardena
+                </p>
+              </div>
+              
+              {/* FAQ Items */}
+              <div className="space-y-4">
+                {/* FAQ 1 */}
+                <div className="group bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl overflow-hidden hover:border-ardena-cyan/40 transition-all duration-300">
+                  <button 
+                    onClick={() => toggleFAQ(0)}
+                    className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark rounded-2xl"
+                  >
+                    <h3 className="text-lg font-light text-white mb-3 flex items-center justify-between">
+                      <span>How quickly can I build my first AI agent?</span>
+                      <svg 
+                        className={`w-5 h-5 text-ardena-cyan transition-transform duration-300 ${openFAQ === 0 ? 'rotate-180' : ''}`} 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </h3>
+                    {openFAQ === 0 && (
+                      <p className="text-ardena-light-gray leading-relaxed font-light animate-fadeIn">
+                        You can build your first AI agent in under 5 minutes! Simply describe what you want your agent to do, choose from our pre-built templates, and deploy. No coding required.
+                      </p>
+                    )}
+                  </button>
+                </div>
+
+                {/* FAQ 2 */}
+                <div className="group bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl overflow-hidden hover:border-ardena-cyan/40 transition-all duration-300">
+                  <button 
+                    onClick={() => toggleFAQ(1)}
+                    className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark rounded-2xl"
+                  >
+                    <h3 className="text-lg font-light text-white mb-3 flex items-center justify-between">
+                      <span>What AI models are supported?</span>
+                      <svg 
+                        className={`w-5 h-5 text-ardena-cyan transition-transform duration-300 ${openFAQ === 1 ? 'rotate-180' : ''}`} 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </h3>
+                    {openFAQ === 1 && (
+                      <p className="text-ardena-light-gray leading-relaxed font-light animate-fadeIn">
+                        We support all major AI models including GPT-4, Claude, Gemini, Llama, and DeepSeek. You can easily switch between models or use multiple models for different agents.
+                      </p>
+                    )}
+                  </button>
+                </div>
+
+                {/* FAQ 3 */}
+                <div className="group bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl overflow-hidden hover:border-ardena-cyan/40 transition-all duration-300">
+                  <button 
+                    onClick={() => toggleFAQ(2)}
+                    className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark rounded-2xl"
+                  >
+                    <h3 className="text-lg font-light text-white mb-3 flex items-center justify-between">
+                      <span>Can I export my agents to other platforms?</span>
+                      <svg 
+                        className={`w-5 h-5 text-ardena-cyan transition-transform duration-300 ${openFAQ === 2 ? 'rotate-180' : ''}`} 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </h3>
+                    {openFAQ === 2 && (
+                      <p className="text-ardena-light-gray leading-relaxed font-light animate-fadeIn">
+                        Yes! You can deploy your agents to Discord, Slack, Telegram, web apps, or export them as APIs. We also provide webhooks and integration tools for custom deployments.
+                      </p>
+                    )}
+                  </button>
+                </div>
+
+                {/* FAQ 4 */}
+                <div className="group bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl overflow-hidden hover:border-ardena-cyan/40 transition-all duration-300">
+                  <button 
+                    onClick={() => toggleFAQ(3)}
+                    className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark rounded-2xl"
+                  >
+                    <h3 className="text-lg font-light text-white mb-3 flex items-center justify-between">
+                      <span>Is there really a free plan?</span>
+                      <svg 
+                        className={`w-5 h-5 text-ardena-cyan transition-transform duration-300 ${openFAQ === 3 ? 'rotate-180' : ''}`} 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </h3>
+                    {openFAQ === 3 && (
+                      <p className="text-ardena-light-gray leading-relaxed font-light animate-fadeIn">
+                        Absolutely! Our free plan includes up to 3 AI agents, 1GB of memory, and basic templates. No credit card required, and you can upgrade anytime.
+                      </p>
+                    )}
+                  </button>
+                </div>
+
+                {/* FAQ 5 */}
+                <div className="group bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl overflow-hidden hover:border-ardena-cyan/40 transition-all duration-300">
+                  <button 
+                    onClick={() => toggleFAQ(4)}
+                    className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark rounded-2xl"
+                  >
+                    <h3 className="text-lg font-light text-white mb-3 flex items-center justify-between">
+                      <span>What integrations are available?</span>
+                      <svg 
+                        className={`w-5 h-5 text-ardena-cyan transition-transform duration-300 ${openFAQ === 4 ? 'rotate-180' : ''}`} 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </h3>
+                    {openFAQ === 4 && (
+                      <p className="text-ardena-light-gray leading-relaxed font-light animate-fadeIn">
+                        We offer 50+ integrations including Google Workspace, Microsoft 365, Notion, Airtable, Zapier, and custom API connections. More integrations are added monthly.
+                      </p>
+                    )}
+                  </button>
+                </div>
+
+                {/* FAQ 6 */}
+                <div className="group bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl overflow-hidden hover:border-ardena-cyan/40 transition-all duration-300">
+                  <button 
+                    onClick={() => toggleFAQ(5)}
+                    className="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark rounded-2xl"
+                  >
+                    <h3 className="text-lg font-light text-white mb-3 flex items-center justify-between">
+                      <span>How secure is my data?</span>
+                      <svg 
+                        className={`w-5 h-5 text-ardena-cyan transition-transform duration-300 ${openFAQ === 5 ? 'rotate-180' : ''}`} 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </h3>
+                    {openFAQ === 5 && (
+                      <p className="text-ardena-light-gray leading-relaxed font-light animate-fadeIn">
+                        Your data is encrypted in transit and at rest. We're SOC 2 compliant and follow industry best practices. Enterprise customers get additional security features and dedicated support.
+                      </p>
+                    )}
+                  </button>
+                </div>
+              </div>
+              
+              {/* Contact Support */}
+              <div className="text-center mt-12 pt-8 border-t border-ardena-cyan/20">
+                <p className="text-ardena-light-gray text-sm font-light mb-4">
+                  Still have questions?
+                </p>
+                <button className="text-ardena-cyan hover:text-white transition-colors duration-300 font-medium">
+                  Contact Support →
+                </button>
               </div>
             </div>
           </div>
