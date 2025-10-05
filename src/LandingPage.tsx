@@ -176,7 +176,7 @@ const LandingPage: React.FC = () => {
                         Step 04
                       </div>
                       <h3 className="text-lg font-light text-white mb-3 tracking-wide">
-                        Enhance with Knowledge
+                        Add Knowledge
                       </h3>
                       <p className="text-ardena-light-gray text-sm leading-relaxed font-light">
                         Upload PDFs, TXT files, or URLs to add your knowledge base
@@ -248,7 +248,7 @@ const LandingPage: React.FC = () => {
                     Step 04
                   </div>
                   <h3 className="text-lg font-light text-white mb-3 tracking-wide">
-                    Enhance with Knowledge
+                    Add Knowledge
                   </h3>
                   <p className="text-ardena-light-gray leading-relaxed font-light">
                     Upload PDFs, TXT files, or URLs to add your knowledge base
