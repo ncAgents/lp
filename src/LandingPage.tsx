@@ -173,7 +173,7 @@ const LandingPage: React.FC = () => {
             
               {/* Subtitle */}
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-ardena-light-gray max-w-3xl mx-auto leading-relaxed font-light px-4">
-                Create powerful AI agents without writing a single line of code. Use simple prompts and templates to build, customize, and deploy intelligent assistants anywhere  from web apps to Gmail, Telegram, and beyond.
+              Create powerful AI agents without writing a single line of code. Build, customize, and deploy them anywhere  from web apps to Gmail, Telegram, and beyond. Plus, join our marketplace to share or sell your agents, and turn your ideas into income.
               </p>
               
               {/* CTA Buttons */}
