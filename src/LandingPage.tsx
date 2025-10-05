@@ -3,37 +3,37 @@ import logo from './assets/logo.png';
 
 const LandingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-ardena-dark">
-      {/* Navbar */}
-      <nav className="absolute top-0 left-0 right-0 z-10 p-6">
-        <div className="max-w-7xl mx-auto flex items-center">
-          <div className="flex items-center">
-            <img src={logo} alt="Ardena Logo" className="h-10 w-auto object-contain" />
-          </div>
-        </div>
-      </nav>
+        <div className="min-h-screen bg-ardena-dark overflow-x-hidden">
+          {/* Navbar */}
+          <nav className="absolute top-0 left-0 right-0 z-10 p-4 md:p-6">
+            <div className="max-w-7xl mx-auto flex items-center">
+              <div className="flex items-center">
+                <img src={logo} alt="Ardena Logo" className="h-8 md:h-10 w-auto object-contain" />
+              </div>
+            </div>
+          </nav>
 
-      {/* Main Content */}
-      <div className="px-4">
-        <div className="max-w-7xl mx-auto">
+          {/* Main Content */}
+          <div className="px-4 md:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="min-h-screen flex items-center justify-center text-center">
             <div className="space-y-8 max-w-4xl mx-auto">
               {/* Main Title */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white leading-tight tracking-wide">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight tracking-wide px-4">
                 Welcome to the Future of AI
               </h1>
             
               {/* Subtitle */}
-              <p className="text-base md:text-lg lg:text-xl text-ardena-light-gray max-w-3xl mx-auto leading-relaxed font-light">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-ardena-light-gray max-w-3xl mx-auto leading-relaxed font-light px-4">
                 Create powerful AI agents without writing a single line of code. Use simple prompts and templates to build, customize, and deploy intelligent assistants anywhere - from web apps to Gmail, Telegram, and beyond.
               </p>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 px-4">
                 {/* Primary CTA Button */}
-                <button className="group relative px-6 py-3 bg-ardena-cyan text-white font-medium rounded-xl text-base transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
-                  <span className="relative z-10 flex items-center gap-2">
+                <button className="group relative w-full sm:w-auto px-6 py-3 bg-ardena-cyan text-white font-medium rounded-xl text-sm sm:text-base transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
+                  <span className="relative z-10 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                     </svg>
@@ -43,7 +43,7 @@ const LandingPage: React.FC = () => {
                 </button>
                 
                 {/* Secondary CTA Button */}
-                <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-medium rounded-xl text-base transition-all duration-300 hover:bg-white hover:text-ardena-dark hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
+                <button className="w-full sm:w-auto px-6 py-3 bg-transparent border-2 border-white text-white font-medium rounded-xl text-sm sm:text-base transition-all duration-300 hover:bg-white hover:text-ardena-dark hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
                   Get Started
                 </button>
               </div>
@@ -51,14 +51,14 @@ const LandingPage: React.FC = () => {
           </div>
 
           {/* Features Section */}
-          <div className="text-center py-32">
+          <div className="text-center py-16 md:py-32">
             {/* Features Heading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-16 tracking-wide">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white mb-12 md:mb-16 tracking-wide px-4">
               What Makes Ardena Different?
             </h2>
             
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4">
               {/* Feature 1 */}
               <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
@@ -110,14 +110,14 @@ const LandingPage: React.FC = () => {
           </div>
 
           {/* How It Works Section */}
-          <div className="text-center py-32">
+          <div className="text-center py-16 md:py-32">
             {/* Section Heading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-20 tracking-wide">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white mb-12 md:mb-20 tracking-wide px-4">
               How It Works
             </h2>
             
             {/* Steps Container */}
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto px-4">
               {/* Desktop: Responsive Grid */}
               <div className="hidden md:block">
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-8 relative">
@@ -272,15 +272,15 @@ const LandingPage: React.FC = () => {
           </div>
 
           {/* Pricing Section */}
-          <div className="text-center py-32">
+          <div className="text-center py-16 md:py-32">
             {/* Section Heading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-20 tracking-wide">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white mb-12 md:mb-20 tracking-wide px-4">
               Simple, Transparent Pricing
             </h2>
             
             {/* Pricing Cards */}
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="max-w-6xl mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 {/* Free Tier */}
                 <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
                   <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
@@ -322,7 +322,7 @@ const LandingPage: React.FC = () => {
                 </div>
 
                 {/* Pro Tier */}
-                <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/40 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/20 transition-all duration-500 hover:scale-105 transform scale-105">
+                <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/40 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/20 transition-all duration-500 hover:scale-105 md:transform md:scale-105">
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-ardena-cyan text-ardena-dark px-4 py-1 rounded-full text-xs font-medium tracking-wider uppercase">
                       Most Popular
