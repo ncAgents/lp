@@ -662,6 +662,145 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Social Proof Section */}
+          <div className="py-16 md:py-24">
+            <div className="max-w-6xl mx-auto px-4">
+              {/* Section Heading */}
+              <div className="text-center mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white mb-4 tracking-wide">
+                  Trusted by Creators Worldwide
+                </h2>
+                <p className="text-ardena-light-gray text-base md:text-lg font-light">
+                  Join thousands of users building the future with AI
+                </p>
+              </div>
+              
+              {/* Stats Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                {/* Stat 1 */}
+                <div className="text-center group">
+                  <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-6 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
+                    <div className="text-2xl md:text-3xl font-light text-ardena-cyan mb-2">
+                      50K+
+                    </div>
+                    <div className="text-white text-base font-light mb-1">
+                      Active Users
+                    </div>
+                    <div className="text-ardena-light-gray text-xs font-light">
+                      Building AI agents daily
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stat 2 */}
+                <div className="text-center group">
+                  <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-6 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
+                    <div className="text-2xl md:text-3xl font-light text-ardena-cyan mb-2">
+                      1M+
+                    </div>
+                    <div className="text-white text-base font-light mb-1">
+                      AI Agents Created
+                    </div>
+                    <div className="text-ardena-light-gray text-xs font-light">
+                      Across all platforms
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stat 3 */}
+                <div className="text-center group">
+                  <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-6 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
+                    <div className="text-2xl md:text-3xl font-light text-ardena-cyan mb-2">
+                      99.9%
+                    </div>
+                    <div className="text-white text-base font-light mb-1">
+                      Uptime
+                    </div>
+                    <div className="text-ardena-light-gray text-xs font-light">
+                      Reliable and secure
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonials */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                {/* Testimonial 1 */}
+                <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-5 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-ardena-cyan to-blue-400 rounded-full flex items-center justify-center text-white font-medium text-base">
+                      S
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-white font-medium text-sm">Sarah Chen</div>
+                      <div className="text-ardena-light-gray text-xs">Product Manager</div>
+                    </div>
+                  </div>
+                  <p className="text-ardena-light-gray leading-relaxed font-light text-xs">
+                    "Ardena transformed how we handle customer support. Built our first agent in 10 minutes and it's been handling 80% of our queries ever since."
+                  </p>
+                </div>
+
+                {/* Testimonial 2 */}
+                <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-5 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-ardena-cyan to-blue-400 rounded-full flex items-center justify-center text-white font-medium text-base">
+                      M
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-white font-medium text-sm">Marcus Rodriguez</div>
+                      <div className="text-ardena-light-gray text-xs">Startup Founder</div>
+                    </div>
+                  </div>
+                  <p className="text-ardena-light-gray leading-relaxed font-light text-xs">
+                    "No-code AI agents? Game changer. We deployed to Discord and Slack in one day. Our community engagement increased by 300%."
+                  </p>
+                </div>
+
+                {/* Testimonial 3 */}
+                <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-5 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105 md:col-span-2 lg:col-span-1">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-ardena-cyan to-blue-400 rounded-full flex items-center justify-center text-white font-medium text-base">
+                      A
+                    </div>
+                    <div className="ml-3">
+                      <div className="text-white font-medium text-sm">Alex Thompson</div>
+                      <div className="text-ardena-light-gray text-xs">Developer</div>
+                    </div>
+                  </div>
+                  <p className="text-ardena-light-gray leading-relaxed font-light text-xs">
+                    "The API integration is seamless. Built a custom workflow that connects our CRM to our AI agent. Saved us weeks of development time."
+                  </p>
+                </div>
+              </div>
+
+              {/* Company Logos */}
+              <div className="text-center">
+                <p className="text-ardena-light-gray text-sm font-light mb-6">
+                  Trusted by teams at
+                </p>
+                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 opacity-60">
+                  {/* Logo Placeholders - You can replace these with actual company logos */}
+                  <div className="text-white text-sm font-light px-3 py-2 border border-ardena-cyan/30 rounded-lg">
+                    TechCorp
+                  </div>
+                  <div className="text-white text-sm font-light px-3 py-2 border border-ardena-cyan/30 rounded-lg">
+                    InnovateLab
+                  </div>
+                  <div className="text-white text-sm font-light px-3 py-2 border border-ardena-cyan/30 rounded-lg">
+                    FutureAI
+                  </div>
+                  <div className="text-white text-sm font-light px-3 py-2 border border-ardena-cyan/30 rounded-lg">
+                    StartupXYZ
+                  </div>
+                  <div className="text-white text-sm font-light px-3 py-2 border border-ardena-cyan/30 rounded-lg">
+                    DigitalFlow
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
