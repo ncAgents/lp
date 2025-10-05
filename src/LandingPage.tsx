@@ -48,8 +48,9 @@ const LandingPage: React.FC = () => {
                 <button className="text-ardena-light-gray hover:text-white transition-colors duration-300 font-light">
                   Sign In
                 </button>
-                <button className="px-3 py-1 bg-ardena-cyan text-white rounded-lg hover:bg-ardena-cyan/80 transition-all duration-300 font-medium hover:shadow-lg hover:shadow-ardena-cyan/25 hover:scale-105">
-                  Get Started
+                <button className="px-3 py-1 bg-ardena-cyan text-white rounded-lg hover:bg-ardena-cyan/80 transition-all duration-300 font-medium hover:shadow-lg hover:shadow-ardena-cyan/25 hover:scale-105 relative overflow-hidden">
+                  <span className="relative z-10">Get Started</span>
+                  <div className="absolute inset-0 opacity-0 hover:opacity-20 transition-opacity duration-300" style={{background: 'linear-gradient(to right, #2BC7F4, #FFD700)'}}></div>
                 </button>
               </div>
 
@@ -121,21 +122,21 @@ const LandingPage: React.FC = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 px-4">
-                    {/* Primary CTA Button */}
-                    <a 
-                      href="https://youtu.be/v_L9ou-wz-Q?si=fe9xMtHcUkV_wJjv" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group relative w-full sm:w-auto px-6 py-3 bg-ardena-cyan text-white font-medium rounded-xl text-sm sm:text-base transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1 inline-block text-center"
-                    >
-                      <span className="relative z-10 flex items-center justify-center gap-2">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                        </svg>
-                        Watch Demo
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-ardena-cyan to-blue-400 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    </a>
+                {/* Primary CTA Button */}
+                <a 
+                  href="https://youtu.be/v_L9ou-wz-Q?si=fe9xMtHcUkV_wJjv" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative w-full sm:w-auto px-6 py-3 bg-ardena-cyan text-white font-medium rounded-xl text-sm sm:text-base transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1 inline-block text-center"
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                    Watch Demo
+                  </span>
+                  <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{background: 'linear-gradient(to right, #2BC7F4, #FFD700)'}}></div>
+                </a>
                 
                 {/* Secondary CTA Button */}
                 <button className="w-full sm:w-auto px-6 py-3 bg-transparent border-2 border-white text-white font-medium rounded-xl text-sm sm:text-base transition-all duration-300 hover:bg-white hover:text-ardena-dark hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
@@ -154,21 +155,22 @@ const LandingPage: React.FC = () => {
             
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4">
-              {/* Feature 1 */}
-              <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="relative">
-                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
-                    01
+                  {/* Feature 1 */}
+                  <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
+                    <div className="relative">
+                      <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                        01
+                      </div>
+                      <h3 className="text-xl font-light text-white mb-4 tracking-wide">
+                        No-Code Agent Builder
+                      </h3>
+                      <p className="text-ardena-light-gray leading-relaxed font-light">
+                        Create powerful AI agents without writing a single line of code.
+                      </p>
+                      <div className="absolute bottom-2 right-2 w-2 h-2 rounded-full opacity-60" style={{backgroundColor: '#FFD700'}}></div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-light text-white mb-4 tracking-wide">
-                    No-Code Agent Builder
-                  </h3>
-                  <p className="text-ardena-light-gray leading-relaxed font-light">
-                    Create powerful AI agents without writing a single line of code.
-                  </p>
-                </div>
-              </div>
 
               {/* Feature 2 */}
               <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
@@ -539,16 +541,16 @@ const LandingPage: React.FC = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                {/* Primary CTA Button */}
-                <button className="group relative w-full sm:w-auto px-8 py-4 bg-ardena-cyan text-white font-medium rounded-xl text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
-                  <span className="relative z-10 flex items-center justify-center gap-3">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
-                    </svg>
-                    Start Building Free
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-ardena-cyan to-blue-400 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                </button>
+                 {/* Primary CTA Button */}
+                 <button className="group relative w-full sm:w-auto px-8 py-4 text-ardena-dark font-medium rounded-xl text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-gold/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-gold focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1" style={{backgroundColor: '#FFD700'}}>
+                   <span className="relative z-10 flex items-center justify-center gap-3">
+                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
+                     </svg>
+                     Start Building Free
+                   </span>
+                   <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" style={{background: 'linear-gradient(to right, #FFD700, #B8860B)'}}></div>
+                 </button>
                 
                     {/* Secondary CTA Button */}
                     <a 
