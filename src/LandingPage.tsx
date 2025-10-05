@@ -175,7 +175,7 @@ const LandingPage: React.FC = () => {
                   </div>
 
               {/* Feature 2 */}
-              <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+              <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105" style={{borderLeftColor: '#FFD700'}}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="relative">
                   <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
