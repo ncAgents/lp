@@ -173,7 +173,7 @@ const LandingPage: React.FC = () => {
             
               {/* Subtitle */}
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-ardena-light-gray max-w-3xl mx-auto leading-relaxed font-light px-4">
-                Create powerful AI agents without writing a single line of code. Use simple prompts and templates to build, customize, and deploy intelligent assistants anywhere - from web apps to Gmail, Telegram, and beyond.
+                Create powerful AI agents without writing a single line of code. Use simple prompts and templates to build, customize, and deploy intelligent assistants anywhere  from web apps to Gmail, Telegram, and beyond.
               </p>
               
               {/* CTA Buttons */}
@@ -254,10 +254,10 @@ const LandingPage: React.FC = () => {
                     03
                   </div>
                   <h3 className="text-xl font-light text-white mb-4 tracking-wide">
-                    Plug-and-Play Tools
+                    Plug and Play Tools
                   </h3>
                   <p className="text-ardena-light-gray leading-relaxed font-light">
-                    Easily connect data sources, APIs, and workflows with ready-to-use integrations.
+                    Easily connect data sources, APIs, and workflows with ready to use integrations.
                   </p>
                   <div className="absolute bottom-2 left-2 w-1.5 h-1.5 rounded-full opacity-50" style={{backgroundColor: '#FFD700'}}></div>
                 </div>
@@ -381,7 +381,7 @@ const LandingPage: React.FC = () => {
                     Choose Your Model
                   </h3>
                   <p className="text-ardena-light-gray leading-relaxed font-light">
-                    Select from Gemini, DeepSeek, Llama, and other leading AI models
+                    Select from Gemini, DeepSeek, Llama, Mistral, Cohere and other leading AI models
                   </p>
                 </div>
 
