@@ -154,7 +154,9 @@ const LandingPage: React.FC = () => {
             </h2>
             
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-4 relative">
+              {/* Subtle gold accent line */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-ardena-gold opacity-30"></div>
                   {/* Feature 1 */}
                   <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
@@ -201,6 +203,7 @@ const LandingPage: React.FC = () => {
                   <p className="text-ardena-light-gray leading-relaxed font-light">
                     Easily connect data sources, APIs, and workflows with ready-to-use integrations.
                   </p>
+                  <div className="absolute bottom-2 left-2 w-1.5 h-1.5 rounded-full opacity-50" style={{backgroundColor: '#FFD700'}}></div>
                 </div>
               </div>
             </div>
@@ -568,17 +571,23 @@ const LandingPage: React.FC = () => {
                     </a>
               </div>
               
-              {/* Trust Indicators */}
-              <div className="mt-12 pt-8 border-t border-ardena-cyan/20">
-                <p className="text-sm text-ardena-light-gray font-light mb-4">
-                  Trusted by creators worldwide
-                </p>
-                <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-                  <div className="text-ardena-light-gray text-sm font-light">✓ No credit card required</div>
-                  <div className="text-ardena-light-gray text-sm font-light">✓ Free forever plan</div>
-                  <div className="text-ardena-light-gray text-sm font-light">✓ Setup in minutes</div>
-                </div>
-              </div>
+                  {/* Trust Indicators */}
+                  <div className="mt-12 pt-8 border-t border-ardena-cyan/20">
+                    <p className="text-sm text-ardena-light-gray font-light mb-4">
+                      Trusted by creators worldwide
+                    </p>
+                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+                      <div className="text-ardena-light-gray text-sm font-light flex items-center gap-2">
+                        <span style={{color: '#FFD700'}}>✓</span> No credit card required
+                      </div>
+                      <div className="text-ardena-light-gray text-sm font-light flex items-center gap-2">
+                        <span style={{color: '#FFD700'}}>✓</span> Free forever plan
+                      </div>
+                      <div className="text-ardena-light-gray text-sm font-light flex items-center gap-2">
+                        <span style={{color: '#FFD700'}}>✓</span> Setup in minutes
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
 
@@ -769,20 +778,21 @@ const LandingPage: React.FC = () => {
               
               {/* Stats Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                {/* Stat 1 */}
-                <div className="text-center group">
-                  <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-6 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
-                    <div className="text-2xl md:text-3xl font-light text-ardena-cyan mb-2">
-                      50K+
+                    {/* Stat 1 */}
+                    <div className="text-center group">
+                      <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-6 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105 relative">
+                        <div className="absolute top-2 right-2 w-1 h-1 rounded-full opacity-40" style={{backgroundColor: '#FFD700'}}></div>
+                        <div className="text-2xl md:text-3xl font-light text-ardena-cyan mb-2">
+                          50K+
+                        </div>
+                        <div className="text-white text-base font-light mb-1">
+                          Active Users
+                        </div>
+                        <div className="text-ardena-light-gray text-xs font-light">
+                          Building AI agents daily
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-white text-base font-light mb-1">
-                      Active Users
-                    </div>
-                    <div className="text-ardena-light-gray text-xs font-light">
-                      Building AI agents daily
-                    </div>
-                  </div>
-                </div>
 
                 {/* Stat 2 */}
                 <div className="text-center group">
