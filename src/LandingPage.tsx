@@ -270,6 +270,169 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Pricing Section */}
+          <div className="text-center py-32">
+            {/* Section Heading */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-20 tracking-wide">
+              Simple, Transparent Pricing
+            </h2>
+            
+            {/* Pricing Cards */}
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Free Tier */}
+                <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Free
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-2 tracking-wide">
+                    Get Started
+                  </h3>
+                  <p className="text-ardena-light-gray text-sm mb-8 font-light">
+                    Perfect for trying out Ardena
+                  </p>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Up to 3 AI agents
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Basic memory (1GB)
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Community support
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Basic templates
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Standard integrations
+                    </div>
+                  </div>
+                  
+                  <button className="w-full py-3 bg-transparent border-2 border-white text-white font-medium rounded-xl text-base transition-all duration-300 hover:bg-white hover:text-ardena-dark hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ardena-dark">
+                    Get Started Free
+                  </button>
+                </div>
+
+                {/* Pro Tier */}
+                <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/40 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/20 transition-all duration-500 hover:scale-105 transform scale-105">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-ardena-cyan text-ardena-dark px-4 py-1 rounded-full text-xs font-medium tracking-wider uppercase">
+                      Most Popular
+                    </div>
+                  </div>
+                  
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Pro
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-2 tracking-wide">
+                    Everything in Free +
+                  </h3>
+                  <p className="text-ardena-light-gray text-sm mb-8 font-light">
+                    For growing teams and businesses
+                  </p>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Unlimited AI agents
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Advanced memory (50GB)
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Multi-agent collaboration
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Advanced analytics
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Priority email support
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Premium templates
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      API access
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Custom integrations
+                    </div>
+                  </div>
+                  
+                  <button className="w-full py-3 bg-ardena-cyan text-white font-medium rounded-xl text-base transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark">
+                    Start Pro Trial
+                  </button>
+                </div>
+
+                {/* Enterprise Tier */}
+                <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    Enterprise
+                  </div>
+                  <h3 className="text-2xl font-light text-white mb-2 tracking-wide">
+                    Everything in Pro +
+                  </h3>
+                  <p className="text-ardena-light-gray text-sm mb-8 font-light">
+                    For large organizations
+                  </p>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Unlimited everything
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Unlimited memory
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Advanced collaboration
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Custom analytics
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      24/7 phone support
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Custom templates
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Full API access
+                    </div>
+                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                      Enterprise security
+                    </div>
+                  </div>
+                  
+                  <button className="w-full py-3 bg-transparent border-2 border-white text-white font-medium rounded-xl text-base transition-all duration-300 hover:bg-white hover:text-ardena-dark hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ardena-dark">
+                    Contact Sales
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
