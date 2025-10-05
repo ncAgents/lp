@@ -60,48 +60,51 @@ const LandingPage: React.FC = () => {
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Feature 1 */}
-              <div className="group p-8 bg-ardena-dark border border-ardena-cyan/20 rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-ardena-cyan/40">
-                <div className="w-16 h-16 bg-ardena-cyan rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
+              <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="relative">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    01
+                  </div>
+                  <h3 className="text-xl font-light text-white mb-4 tracking-wide">
+                    No-Code Agent Builder
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Create powerful AI agents without writing a single line of code.
+                  </p>
                 </div>
-                <h3 className="text-lg font-light text-white mb-4 tracking-wide">
-                  No-Code Agent Builder
-                </h3>
-                <p className="text-ardena-light-gray leading-relaxed font-light">
-                  Create powerful AI agents without writing a single line of code.
-                </p>
               </div>
 
               {/* Feature 2 */}
-              <div className="group p-8 bg-ardena-dark border border-ardena-cyan/20 rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-ardena-cyan/40">
-                <div className="w-16 h-16 bg-ardena-cyan rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
-                  </svg>
+              <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="relative">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    02
+                  </div>
+                  <h3 className="text-xl font-light text-white mb-4 tracking-wide">
+                    Deploy Anywhere
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Publish your agents instantly to Discord, Slack, or the Web.
+                  </p>
                 </div>
-                <h3 className="text-lg font-light text-white mb-4 tracking-wide">
-                  Deploy Anywhere
-                </h3>
-                <p className="text-ardena-light-gray leading-relaxed font-light">
-                  Publish your agents instantly to Discord, Slack, or the Web.
-                </p>
               </div>
 
               {/* Feature 3 */}
-              <div className="group p-8 bg-ardena-dark border border-ardena-cyan/20 rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 hover:border-ardena-cyan/40 md:col-span-2 lg:col-span-1">
-                <div className="w-16 h-16 bg-ardena-cyan rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+              <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border-l-4 border-ardena-cyan hover:shadow-xl hover:shadow-ardena-cyan/10 transition-all duration-500 hover:scale-105 md:col-span-2 lg:col-span-1">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-ardena-cyan/5 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="relative">
+                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                    03
+                  </div>
+                  <h3 className="text-xl font-light text-white mb-4 tracking-wide">
+                    Plug-and-Play Tools
+                  </h3>
+                  <p className="text-ardena-light-gray leading-relaxed font-light">
+                    Easily connect data sources, APIs, and workflows with ready-to-use integrations.
+                  </p>
                 </div>
-                <h3 className="text-lg font-light text-white mb-4 tracking-wide">
-                  Plug-and-Play Tools
-                </h3>
-                <p className="text-ardena-light-gray leading-relaxed font-light">
-                  Easily connect data sources, APIs, and workflows with ready-to-use integrations.
-                </p>
               </div>
             </div>
           </div>
