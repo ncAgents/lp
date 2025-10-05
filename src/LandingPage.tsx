@@ -433,6 +433,57 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Final CTA Section */}
+          <div className="text-center py-16 md:py-24">
+            <div className="max-w-4xl mx-auto px-4">
+              {/* CTA Heading */}
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6 tracking-wide">
+                Ready to Build Your First AI Agent?
+              </h2>
+              
+              {/* CTA Subtitle */}
+              <p className="text-base md:text-lg lg:text-xl text-ardena-light-gray mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+                Join thousands of creators who are already building intelligent agents without writing a single line of code.
+              </p>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                {/* Primary CTA Button */}
+                <button className="group relative w-full sm:w-auto px-8 py-4 bg-ardena-cyan text-white font-medium rounded-xl text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
+                  <span className="relative z-10 flex items-center justify-center gap-3">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
+                    </svg>
+                    Start Building Free
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-ardena-cyan to-blue-400 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                </button>
+                
+                {/* Secondary CTA Button */}
+                <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white text-white font-medium rounded-xl text-lg transition-all duration-300 hover:bg-white hover:text-ardena-dark hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ardena-dark transform hover:-translate-y-1">
+                  <span className="flex items-center justify-center gap-3">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                    Watch Demo
+                  </span>
+                </button>
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="mt-12 pt-8 border-t border-ardena-cyan/20">
+                <p className="text-sm text-ardena-light-gray font-light mb-4">
+                  Trusted by creators worldwide
+                </p>
+                <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+                  <div className="text-ardena-light-gray text-sm font-light">✓ No credit card required</div>
+                  <div className="text-ardena-light-gray text-sm font-light">✓ Free forever plan</div>
+                  <div className="text-ardena-light-gray text-sm font-light">✓ Setup in minutes</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
