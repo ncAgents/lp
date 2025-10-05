@@ -10,6 +10,8 @@ export default {
         'ardena-dark': '#0B0F1A',
         'ardena-cyan': '#2BC7F4',
         'ardena-light-gray': '#D3D7E0',
+        'ardena-gold': '#FFD700',
+        'ardena-gold-dark': '#B8860B',
       }
     },
   },

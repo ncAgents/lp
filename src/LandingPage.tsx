@@ -417,59 +417,54 @@ const LandingPage: React.FC = () => {
                 </div>
 
                 {/* Pro Tier */}
-                <div className="group relative p-8 bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/40 rounded-2xl hover:shadow-xl hover:shadow-ardena-cyan/20 transition-all duration-500 hover:scale-105 md:transform md:scale-105">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-ardena-cyan text-ardena-dark px-4 py-1 rounded-full text-xs font-medium tracking-wider uppercase">
-                      Most Popular
-                    </div>
-                  </div>
+                <div className="group relative p-8 bg-ardena-gold border border-ardena-gold rounded-2xl hover:shadow-xl hover:shadow-ardena-gold/20 transition-all duration-500 hover:scale-105 md:transform md:scale-105" style={{backgroundColor: '#FFD700'}}>
                   
-                  <div className="text-ardena-cyan text-sm font-medium mb-3 tracking-wider uppercase">
+                  <div className="text-ardena-dark text-sm font-medium mb-3 tracking-wider uppercase">
                     Pro
                   </div>
-                  <h3 className="text-2xl font-light text-white mb-2 tracking-wide">
+                  <h3 className="text-2xl font-light text-ardena-dark mb-2 tracking-wide">
                     Everything in Free +
                   </h3>
-                  <p className="text-ardena-light-gray text-sm mb-8 font-light">
+                  <p className="text-ardena-dark/80 text-sm mb-8 font-light">
                     For growing teams and businesses
                   </p>
                   
                   <div className="space-y-4 mb-8">
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       Unlimited AI agents
                     </div>
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       Advanced memory (50GB)
                     </div>
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       Multi-agent collaboration
                     </div>
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       Advanced analytics
                     </div>
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       Priority email support
                     </div>
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       Premium templates
                     </div>
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       API access
                     </div>
-                    <div className="flex items-center text-ardena-light-gray text-sm font-light">
-                      <div className="w-1.5 h-1.5 bg-ardena-cyan rounded-full mr-3"></div>
+                    <div className="flex items-center text-ardena-dark/90 text-sm font-light">
+                      <div className="w-1.5 h-1.5 bg-ardena-dark rounded-full mr-3"></div>
                       Custom integrations
                     </div>
                   </div>
                   
-                  <button className="w-full py-3 bg-ardena-cyan text-white font-medium rounded-xl text-base transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-cyan/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark">
+                  <button className="w-full py-3 bg-ardena-dark text-white font-medium rounded-xl text-base transition-all duration-300 hover:shadow-2xl hover:shadow-ardena-dark/40 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ardena-dark focus:ring-offset-2 focus:ring-offset-ardena-gold">
                     Start Pro Trial
                   </button>
                 </div>
