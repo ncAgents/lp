@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import logo from './assets/logo.png';
+import deonPhoto from './assets/deon.jpg';
+import nimohPhoto from './assets/nimoh.jpg';
+import alexPhoto from './assets/image.png';
 
 const LandingPage: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -889,12 +892,16 @@ const LandingPage: React.FC = () => {
                 {/* Testimonial 1 */}
                 <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-5 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-ardena-cyan to-blue-400 rounded-full flex items-center justify-center text-white font-medium text-base">
-                      S
+                    <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-ardena-cyan/30">
+                      <img 
+                        src={deonPhoto} 
+                        alt="Deon Chinese" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="ml-3">
-                      <div className="text-white font-medium text-sm">Sarah Chen</div>
-                      <div className="text-ardena-light-gray text-xs">Product Manager</div>
+                      <div className="text-white font-medium text-sm">Deon Chinese</div>
+                      <div className="text-ardena-light-gray text-xs">AI Engineer</div>
                     </div>
                   </div>
                   <p className="text-ardena-light-gray leading-relaxed font-light text-xs">
@@ -905,11 +912,15 @@ const LandingPage: React.FC = () => {
                 {/* Testimonial 2 */}
                 <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-5 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-ardena-cyan to-blue-400 rounded-full flex items-center justify-center text-white font-medium text-base">
-                      M
+                    <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-ardena-cyan/30">
+                      <img 
+                        src={nimohPhoto} 
+                        alt="Amani Nimoh" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="ml-3">
-                      <div className="text-white font-medium text-sm">Marcus Rodriguez</div>
+                      <div className="text-white font-medium text-sm">Amani Nimoh</div>
                       <div className="text-ardena-light-gray text-xs">Startup Founder</div>
                     </div>
                   </div>
@@ -921,8 +932,12 @@ const LandingPage: React.FC = () => {
                 {/* Testimonial 3 */}
                 <div className="bg-gradient-to-br from-ardena-dark/50 to-ardena-dark border border-ardena-cyan/20 rounded-2xl p-5 hover:border-ardena-cyan/40 transition-all duration-300 hover:scale-105 md:col-span-2 lg:col-span-1">
                   <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-ardena-cyan to-blue-400 rounded-full flex items-center justify-center text-white font-medium text-base">
-                      A
+                    <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-ardena-cyan/30">
+                      <img 
+                        src={alexPhoto} 
+                        alt="Alex Thompson" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="ml-3">
                       <div className="text-white font-medium text-sm">Alex Thompson</div>
