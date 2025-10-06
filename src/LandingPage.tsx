@@ -1066,7 +1066,7 @@ const LandingPage: React.FC = () => {
 
       {/* Floating AI Assistant Button */}
       <div className="fixed bottom-6 right-6 z-40">
-        <button className="group relative w-14 h-14 bg-ardena-cyan rounded-full shadow-lg hover:shadow-xl hover:shadow-ardena-cyan/40 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-ardena-cyan focus:ring-offset-2 focus:ring-offset-ardena-dark">
+        <button className="group relative w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-ardena-gold focus:ring-offset-2 focus:ring-offset-ardena-dark" style={{backgroundColor: '#FFD700'}}>
           {/* AI Chat Icon */}
           <div className="absolute inset-0 flex items-center justify-center">
             <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -1075,7 +1075,7 @@ const LandingPage: React.FC = () => {
           </div>
           
           {/* Subtle pulse animation */}
-          <div className="absolute inset-0 rounded-full bg-ardena-cyan opacity-20 animate-ping"></div>
+          <div className="absolute inset-0 rounded-full opacity-20 animate-ping" style={{backgroundColor: '#FFD700'}}></div>
           
           {/* Tooltip */}
           <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-ardena-dark border border-ardena-cyan/20 rounded-lg text-white text-sm font-light whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
